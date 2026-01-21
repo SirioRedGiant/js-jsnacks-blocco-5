@@ -11,4 +11,60 @@ const zucchine = [
   { type: 'Calabrese', weight: 14, length: 4 },
 ];
 
+//^ forEach
+const zucchineLunghe = [];
+const zucchineCorte = [];
+zucchine.forEach(function(zucchina) {
+  if (zucchina.length >= 15) {
+    zucchineLunghe.push(zucchina);
+  } else {
+    zucchineCorte.push(zucchina);
+  }
+});
+console.log(zucchineLunghe);
+console.log(zucchineCorte);
+
+console.log("");
+console.log("==== Arrow FUnction ====");
+
+//note arrow function di forEach
+const longZucchinis = [];
+const shortZucchinis = [];
+zucchine.forEach(zucchina => (zucchina.length >= 15 ? longZucchinis.push(zucchina) : shortZucchinis.push(zucchina)));
+console.log(longZucchinis);
+console.log(shortZucchinis);
+
+
+
+console.log("");
+console.log("==== FILTER ====");
+
+//fixed Filter
+const overSized = zucchine.filter(function(zucchina) {
+  return zucchina.length >= 15;
+});
+
+const fittedSized = zucchine.filter(function(zucchina) {
+  return zucchina.length < 15;
+})
+console.log(overSized);
+console.log(fittedSized);
+
+console.log("");
+console.log("==== Filter Arrow Function ====");
+
+//* Filter Arrow function
+const bigZucchini = zucchine.filter(zucchina => zucchina.length >= 15);
+const smallZucchini = zucchine.filter(zucchina => zucchina.length < 15);
+console.log(bigZucchini);
+console.log(smallZucchini);
+
+
+
+
+
+
+
+
+
 // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
