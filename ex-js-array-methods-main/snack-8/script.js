@@ -31,7 +31,7 @@ console.log("Arrow function");
 
 //fixed Arrow Function
 const MarcoLanciAula = students.find(student => student.name === "Marco Lanci");
-console.log(MarcoLanciAula);
+console.log(MarcoLanciAula.class);
 
 
 
