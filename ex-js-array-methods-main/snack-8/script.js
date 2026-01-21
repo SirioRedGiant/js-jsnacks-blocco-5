@@ -19,5 +19,31 @@ const students = [
   },
 ];
 
+//^ Find
+const classeDiMarcoLanci = students.find(function(student) {
+  return student.name === "Marco Lanci";
+});
+console.log(classeDiMarcoLanci.class);
+
+console.log("");
+console.log("Arrow function");
+
+
+//fixed Arrow Function
+const MarcoLanciAula = students.find(student => student.name === "Marco Lanci");
+console.log(MarcoLanciAula);
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Recupera la classe dello studente 'Marco Lanci'
 // Risultato: '3C'
