@@ -23,15 +23,17 @@ const students = [
 const classeDiMarcoLanci = students.find(function(student) {
   return student.name === "Marco Lanci";
 });
-console.log(classeDiMarcoLanci.class);
+const classOfMarco = classeDiMarcoLanci ? classeDiMarcoLanci.class : null;
+console.log(classeDiMarcoLanci ? classeDiMarcoLanci.class : null);
 
 console.log("");
 console.log("Arrow function");
 
 
 //fixed Arrow Function
-const MarcoLanciAula = students.find(student => student.name === "Marco Lanci");
-console.log(MarcoLanciAula.class);
+const MarcoLanciAula = students.find(student => student.name === "Marco Lanci")?.class
+
+console.log(MarcoLanciAula);
 
 
 
